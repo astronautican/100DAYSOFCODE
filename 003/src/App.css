@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.form-box {
+  background-color: #adb2fd;
+  padding: 50px;
+}
+
+.form-label {
+  color: #000;
+}
+
+.form-check-label {
+  color: #000;
+}
+
+.form-check .form-check-input {
+  float: none;
+}
