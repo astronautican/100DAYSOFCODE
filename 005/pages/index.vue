@@ -15,7 +15,7 @@ export default Vue.extend({
       launches: [],
       headers: [
         {
-          text: 'name',
+          text: 'names',
           align: 'start',
           value: 'name',
         },
