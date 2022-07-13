@@ -26,6 +26,8 @@ export default {
    */
   modules: [],
 
+  buildModules: ["@nuxtjs/dotenv"],
+
   /*
    ** Global CSS
    ** Doc: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-css

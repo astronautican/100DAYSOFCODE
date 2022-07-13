@@ -20,12 +20,7 @@
     <div class="main">
       <div class="launchbox" v-for="article in articles" :key="article">
         <figure class="snip1336">
-          <img
-            v-if="article.thumbnail"
-            :src="article.thumbnail"
-            alt="uploaded-image"
-            class="launchimage"
-          />
+          <img v-if="article.thumbnail" :src="article.thumbnail" alt="uploaded-image" class="launchimage" />
           <img v-else src="@/assets/img/default.png" alt="default-image" />
           <figcaption>
             <img class="profile" :src="article.thumbnail" alt="profile" />
@@ -62,8 +57,8 @@ export default {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "817f35ecf6msh0a18d5d6e8eac86p116509jsn59fa8f7e64e9",
-        "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
+        "X-RapidAPI-Key": process.env.APIKEY,
+        "X-RapidAPI-Host": process.env.APIHOST,
       },
     };
 
@@ -82,10 +77,12 @@ export default {
   display: flex;
   flex-wrap: wrap;
 }
+
 .launchbox {
   margin-bottom: 30px;
   border: 1px solid black;
 }
+
 .patchimg {
   width: 200px;
 }
@@ -108,6 +105,7 @@ export default {
 /*  */
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
+
 .snip1336 {
   font-family: "Roboto", Arial, sans-serif;
   position: relative;
@@ -121,23 +119,27 @@ export default {
   line-height: 1.4em;
   background-color: #141414;
 }
+
 .snip1336 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
+
 .snip1336 img {
   max-width: 100%;
   vertical-align: top;
   opacity: 0.85;
 }
+
 .snip1336 figcaption {
   width: 100%;
   background-color: #141414;
   padding: 25px;
   position: relative;
 }
+
 .snip1336 figcaption:before {
   position: absolute;
   content: "";
@@ -149,6 +151,7 @@ export default {
   border-width: 55px 0 0 400px;
   border-color: transparent transparent transparent #141414;
 }
+
 .snip1336 figcaption a {
   padding: 5px;
   border: 1px solid #ffffff;
@@ -164,9 +167,11 @@ export default {
   font-weight: 600;
   letter-spacing: 1px;
 }
+
 .snip1336 figcaption a:hover {
   opacity: 1;
 }
+
 .snip1336 .profile {
   border-radius: 50%;
   position: absolute;
@@ -177,20 +182,24 @@ export default {
   opacity: 1;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
+
 .snip1336 .follow {
   margin-right: 4%;
   border-color: #2980b9;
   color: #2980b9;
 }
+
 .snip1336 h2 {
   margin: 0 0 5px;
   font-weight: 300;
 }
+
 .snip1336 h2 span {
   display: block;
   font-size: 0.5em;
   color: #2980b9;
 }
+
 .snip1336 p {
   margin: 0 0 10px;
   font-size: 0.8em;
