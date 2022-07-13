@@ -1,3 +1,3 @@
 <template>
-  <Tutorial />
+  <Articles />
 </template>
